@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href='css/style.css'>
+    <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
+    <title>Navigation One</title>
+</head>
+<body>
+   
+ 
+   <nav x-data="{isOpen: false}"   class="md:shadow-md mb-16">
+       <div class="max-w-7xl mx-auto">
+        <div class="flex justify-between items-center py-4">
+         
+            <!------------------------------------------------------------- ----------------------------left side--------------------  ------------------------------------------------------>
+            <div class="flex items-center cursor-pointer ml-2">
+            <div>
+                <svg width="35" height="16" viewBox="0 0 35 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M17.049 0.019043L0 11.0404L7.59215 15.9483L17.049 9.83492L26.5059 15.9483L34.0982 11.0404L17.049 0.019043Z" fill="#816AFE" />
+           </svg><svg width="35" height="17" viewBox="0 0 35 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M7.59205 0.948242L0 5.85612L17.049 16.8775L34.0982 5.85612L26.5061 0.948242L17.049 7.06178L7.59205 0.948242Z" fill="#48D3FE" />
+
+          </svg>
+            </div>
+            <div>
+                <h1 class="ml-2 text-2xl font-bold">Bibbble</h1>
+            </div>
+            </div>
+
+
+
+            <!--------------------------------------------------------------------------------------------------- right side------------------------  ------------------------------------------------------------------->
+            <div class="flex justify-items-center items-center">
+
+                <!-- {/* Responsive Menu or Hamburger Menu  */} -->
+
+                <div class='md:hidden flex item-center mr-2'>
+                   <button 
+                  @click="isOpen = !isOpen"
+                   >
+                       
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+                    </svg>
+                   </button>
+                </div>
+
+
+                <div class='hidden md:flex space-x-6 font-medium text-sm'>
+                    <a class="hover:text-indigo-600 cursor-pointer" to="/">Home</a>
+                    <a class="hover:text-indigo-600 cursor-pointer" to="/">About</a>
+                    <a class="hover:text-indigo-600 cursor-pointer" to="/">Features</a>
+                    <a class="hover:text-indigo-600 cursor-pointer" to="/">Pricing</a>
+                </div>
+
+                   
+                <div class='ml-3 hidden md:flex '>
+                    <button class=' bg-slate-100 text-indigo-500 mx-3 px-2 py-1 rounded font-medium text-sm hover:bg-slate-200 transtion duration-300'>Log In</button>
+
+                    <button class='bg-indigo-500 text-white px-2 py-1 rounded font-medium text-sm
+                        hover:bg-indigo-600 transtion duration-300'>Buy Now- 24$</button>
+                </div>
+            </div>
+        </div>
+       </div>
+       <!-- {/* Mobile Navigation menu */} -->
+
+       <div x-show="isOpen" @click.outside="isOpen = false" class='md:hidden font-medium text-sm shadow-md '
+           >
+   
+           <div  >
+           <nav  >
+            <a class="block py-2 text-center" to="/">Home</a>
+            <a class="block py-2 text-center" to="/">About</a>
+            <a class="block py-2 text-center" to="/">Features</a>
+            <a class="block pt-2 pb-5 text-center" to="/">Pricing</a>
+            <div class='pb-5 ml-14'>
+               <button class=' bg-slate-100 text-indigo-500 mx-3 px-2 py-1 rounded font-medium text-sm hover:bg-slate-200 transtion duration-300'>Log In</button>
+                       
+               <button class='bg-indigo-500 text-white px-2 py-1 rounded font-medium text-sm
+               hover:bg-indigo-600 transtion duration-300'>Buy Now- 24$</button>
+
+            </div>
+           </nav>
+         </div>
+       </div>
+   </nav>
+
+
+   <script src="dist/app.js"></script>
+</body>
+</html>

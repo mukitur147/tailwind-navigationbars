@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href='css/style.css'>
+    <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
+    <title>Navigation Seven</title>
+</head>
+<body>
+    <nav x-data="{isOpen : false}" class='md:shadow-md mb-16'>
+        <div class='max-w-xl mx-auto'>
+        <div class='flex  items-center py-4 mx-auto text-center'>
+            <div class=' flex mx-auto'>
+            <div class='xs:ml-2'>
+                    <svg width="35" height="16" viewBox="0 0 35 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M17.049 0.019043L0 11.0404L7.59215 15.9483L17.049 9.83492L26.5059 15.9483L34.0982 11.0404L17.049 0.019043Z" fill="#816AFE" />
+                    </svg><svg width="35" height="17" viewBox="0 0 35 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M7.59205 0.948242L0 5.85612L17.049 16.8775L34.0982 5.85612L26.5061 0.948242L17.049 7.06178L7.59205 0.948242Z" fill="#48D3FE" />
+                    </svg>
+   
+                    </div>
+                   <h1 class='ml-1 text-2xl font-bold'>Bibbble</h1>
+
+
+                   <div class='hidden md:flex space-x-9  text-sm items-center md:ml-5'>
+                    <a class="hover:text-indigo-600 font-medium" to="/">Home</a>
+                    <a class="hover:text-indigo-600 font-medium" to="/">About</a>
+                    <a class="hover:text-indigo-600 font-medium" to="/">Features</a>
+                    <a class="hover:text-indigo-600 font-medium" to="/">Pricing</a>
+                    <a class="hover:text-indigo-600 font-medium" to="/">Gallery</a>
+                    <a class="hover:text-indigo-600 font-medium" to="/">Team</a>
+                    <a class="hover:text-indigo-600 font-medium" to="/">Store</a>
+                    <a class="hover:text-indigo-600 font-medium" to="/">Trial</a>
+                    <a class="hover:text-indigo-600 font-medium flex items-center" to="/">EN<svg class='ml-1' width="9" height="6" viewBox="0 0 9 6" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M8.39746 0H0.397461L4.39746 6L8.39746 0Z" fill="#7E8190"/>
+                    </svg></a>
+                    
+                    
+                    
+                </div>
+                
+            </div>
+            <div class='md:hidden flex item-center mr-2'>
+                  <button @click="isOpen = !isOpen" >
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+                    </svg>
+                  </button>
+                </div>
+        </div>
+                                                    <!-- {/* Mobile Navigation menu */} -->
+
+             <div x-show="isOpen" class= 'md:hidden font-medium text-sm shadow-md '>
+            
+                    <div  >
+                    <nav  >
+                    <a  class="block py-2 text-center" to="/">Home</a>
+                    <a  class="block py-2 text-center" to="/">About</a>
+                    <a  class="block py-2 text-center" to="/">Features</a>
+                    <a  class="block py-2 text-center" to="/">Pricing</a>
+                    <a  class="block py-2 text-center" to="/">Gallery</a>
+                    <a  class="block py-2 text-center" to="/">Team</a>
+                    <a  class="block py-2 text-center" to="/">Store</a>
+                    <a  class="block py-2 text-center" to="/">Trial</a>
+                    <a  class="block py-2 text-center" to="/">EN</a>
+                   
+                    </nav>
+                  </div>
+                </div>
+        </div>
+        </nav>  
+</body>
+</html>
